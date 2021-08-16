@@ -23,7 +23,7 @@ class Rat {
         this.timeSinceRun = 0;
         this.runInterval = Math.random() * 50 + 50;
         this.counted = false;
-        this.sound = 'sound 1'
+        this.sound = 'sound1'
 
     }
     update(deltatime){
@@ -45,6 +45,14 @@ class Rat {
         ctx.drawImage(this.image, 45, 50, this.ratSpriteWidth, this.ratSpriteHeight, this.x, 120+this.y, this.width, this.height);
     }
 }
+
+
+const ratNoise = document.createElement('audio');
+// ratNoise.src = 'qubodupSqueakyRatDeath.ogg';
+
+const catMeow = document.createElement('audio');
+// catMeow.src = 'Meow.ogg';
+
 
 function animateRats(timestamp){
     // ctx.strokeRect(0, 0, canvas.width, canvas.height);
@@ -78,6 +86,11 @@ function getPoints() {
     for (let i = 0; i< rats.length; i++){
         if (caughtRat(cat, rats[i])){
             if(!rats[i].counted){
+            if(rats[i].sound == 'sound1'){
+                catMeow.play();
+            }else {
+                catMeow.play();
+            }
             score += 2;
             rats[i].counted = true;
             rats.splice(i, 1);
