@@ -121,11 +121,11 @@ function animate() {
         drawCharacter(catSprite, cat.width*cat.frameX, cat.height*cat.frameY, cat.width, cat.height,
             cat.x, cat.y, cat.width, cat.height);
         
-                
+        getPoints();
+        drawScore()    
         moveCat();  
         handleCatFrame();
-        getPoints();
-        drawScore();
+        
     }
 }
 

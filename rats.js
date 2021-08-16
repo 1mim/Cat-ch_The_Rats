@@ -23,6 +23,7 @@ class Rat {
         this.timeSinceRun = 0;
         this.runInterval = Math.random() * 50 + 50;
         this.counted = false;
+        this.sound = 'sound 1'
 
     }
     update(deltatime){
@@ -67,10 +68,10 @@ animateRats(0);
 // scoreboard 
 
 function caughtRat(first, second){
-    return !( first.frameX > second.x + second.width ||
-        first.frameX + first.width < second.x ||
-        first.frameY > second.y + second.height ||
-        first.frameY + first.height < second.y)
+    return !( first.x > second.x + second.width ||
+        first.x + (first.width*first.frameX) < second.x ||
+        first.y > (120+second.y) + second.height ||
+        first.y + (first.height*first.frameY) < (120+second.y))
 }
 
 function getPoints() {
