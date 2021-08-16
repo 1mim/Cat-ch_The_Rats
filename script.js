@@ -117,12 +117,36 @@ function startAnimating(fps) {
 function drawScore(){
     ctx.fillStyle = 'orange';
     ctx.font = '10px Arial';
-    ctx.fillText("SCORE", 75, 22);
+    ctx.fillText("SCORE", 80, 22);
     ctx.fillStyle = 'white';
     ctx.font = '30px Impact';
-    ctx.fillText(score, 75, 57)
+    ctx.fillText(score, 80, 57)
 }
 
+
+//timer
+
+
+function drawTime(){
+    ctx.fillStyle = 'white';
+    ctx.font = '17px Arial';
+    ctx.fillText(currentTime, 585, 35);
+
+}
+
+// let timeLeft = 0;
+let currentTime = 30;
+
+function countdown() {
+    currentTime--;
+
+    if(currentTime == 0) {
+        clearInterval(countDownTimerId)
+        alert('GAME OVER! your final score is ' + score)
+    }
+}
+
+let countDownTimerId = setInterval(countdown, 1000);
 
 //animate
 
@@ -151,6 +175,8 @@ function animate() {
         moveCat();  
         handleCatFrame();
         
+        drawTime();
+
     }
 }
 
