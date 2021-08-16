@@ -1,0 +1,22 @@
+#canvas1 {
+    width: 650px;
+    height: 400px;
+    border: 5px solid tan;
+    /* border-radius: 20px; */
+    background: burlywood;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#canvas2 {
+    width: 650px;
+    height: 400px;
+    /* border-radius: 20px; */
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
