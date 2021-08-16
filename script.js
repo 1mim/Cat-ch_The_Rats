@@ -115,8 +115,12 @@ function startAnimating(fps) {
 // scoreboard 
 
 function drawScore(){
+    ctx.fillStyle = 'orange';
+    ctx.font = '10px Arial';
+    ctx.fillText("SCORE", 75, 22);
     ctx.fillStyle = 'white';
-    ctx.fillText(score, 60, 50)
+    ctx.font = '30px Impact';
+    ctx.fillText(score, 75, 57)
 }
 
 
