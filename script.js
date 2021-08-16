@@ -27,12 +27,25 @@ const cat = {
 
 };
 
+const cheeseTable = {
+    x: 0,
+    y: 135,
+    width: 145,
+    height: 193,
+    frameX: 0,
+    frameY: 0,
+    moving: false
+
+};
 
 const catSprite = new Image();
 catSprite.src = "https://i.ibb.co/kXmqvCD/Cat-Sprite.png";
 
+const cheeseImage = new Image();
+cheeseImage.src = "cheese_table.png";
+
 const background = new Image();
-background.src = "https://i.ibb.co/Jv75GKM/living-Room2.png";
+background.src = "r3_LivingRoom.png";
 
 function drawCharacter(img, sX, sY, sW, sH, dX, dY, dW, dH){
     ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
@@ -120,9 +133,17 @@ function animate() {
         
         drawCharacter(catSprite, cat.width*cat.frameX, cat.height*cat.frameY, cat.width, cat.height,
             cat.x, cat.y, cat.width, cat.height);
-        
+
+        drawCharacter(cheeseImage, cheeseTable.width*cheeseTable.frameX, cheeseTable.height*cheeseTable.frameY, cheeseTable.width, cheeseTable.height,
+            cheeseTable.x, cheeseTable.y, cheeseTable.width, cheeseTable.height);
+            
+
         getPoints();
-        drawScore()    
+        drawScore();
+        
+        losePoints();
+        drawScore();
+        
         moveCat();  
         handleCatFrame();
         

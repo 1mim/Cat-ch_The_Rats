@@ -73,7 +73,7 @@ function animateRats(timestamp){
 animateRats(0);
 
 
-// scoreboard 
+// +2 points for catching rats 
 
 function caughtRat(first, second){
     return !( first.x > second.x + second.width ||
@@ -97,7 +97,29 @@ function getPoints() {
         }}
 }}
 
+// -2 points for rats eating cheese
 
+function ratEatCheese(first, second){
+    return !( first.x > second.x + second.width ||
+        first.x + first.width < second.x ||
+        first.y > (120+second.y) + second.height ||
+        first.y + first.height < (120+second.y))
+}
+
+function losePoints() {
+    for (let i = 0; i< rats.length; i++){
+        if (ratEatCheese(cheeseTable, rats[i])){
+            if(!rats[i].counted){
+            // if(rats[i].sound == 'sound1'){
+            //     catMeow.play();
+            // }else {
+            //     catMeow.play();
+            // }
+            score -= 2;
+            rats[i].counted = true;
+            rats.splice(i, 1);
+        }}
+}}
 
 
 
