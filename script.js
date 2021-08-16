@@ -39,7 +39,7 @@ const cheeseTable = {
 };
 
 const catSprite = new Image();
-catSprite.src = "https://i.ibb.co/kXmqvCD/Cat-Sprite.png";
+catSprite.src = "CatSprite.png";
 
 const cheeseImage = new Image();
 cheeseImage.src = "cheese_table.png";

@@ -17,7 +17,7 @@ class Rat {
 
         this.markedForDeletion = false;
         this.image = new Image();
-        this.image.src = 'https://i.ibb.co/7vMbCNQ/Rat.png';
+        this.image.src = 'Rat.png';
         this.frame = 0;
         this.maxFrame = 3;
         this.timeSinceRun = 0;
