@@ -133,10 +133,10 @@ const init = () => {
     rats = [];
     score = 0;
     ratEatCheeseCount = 0;
-    currentTime = 5;
-    countDownTimerId = setInterval(countdown, 1000);
+    currentTime = 15;
     clearInterval(countDownTimerId);
-
+    countDownTimerId = setInterval(countdown, 1000);
+    animationIDRats = requestAnimationFrame(animateRats);
 }
 
 
@@ -164,13 +164,11 @@ function countdown() {
         finalScore.innerHTML = score;
 
         restart.addEventListener('click', ()=>{
-            gameOverUI.style.display = 'none';
             init();
             startAnimating(40);
-            animationIDRats = requestAnimationFrame(animateRats);
             // animateRats(0)
+            gameOverUI.style.display = 'none';
             })
-        
     }
 }
 
