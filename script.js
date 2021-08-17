@@ -136,7 +136,6 @@ const init = () => {
     currentTime = 15;
     clearInterval(countDownTimerId);
     countDownTimerId = setInterval(countdown, 1000);
-    animationIDRats = requestAnimationFrame(animateRats);
 }
 
 
@@ -159,7 +158,6 @@ function countdown() {
     if(currentTime == 0) {
         clearInterval(countDownTimerId);
         cancelAnimationFrame(animationIDRats)
-        
         // alert('GAME OVER. Your total score: ' + score);
         gameOverUI.style.display = 'initial';
         finalScore.innerHTML = score;
@@ -167,7 +165,7 @@ function countdown() {
         restart.addEventListener('click', ()=>{
             init();
             startAnimating(40);
-            // animateRats(0)
+            animateRats(0)
             gameOverUI.style.display = 'none';
             })
     }
