@@ -55,7 +55,7 @@ const catSprite = new Image();
 catSprite.src = "CatSprite.png";
 
 const cheeseImage = new Image();
-cheeseImage.src = "cheese_table.png";
+cheeseImage.src = "r2_cheese_table.png";
 
 const background = new Image();
 background.src = "r5_LivingRoom.png";
