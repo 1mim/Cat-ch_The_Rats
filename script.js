@@ -14,7 +14,7 @@ const finalScore = document.querySelector('.yourscore');
 const start = document.querySelector('#play');
 const startGameUI = document.querySelector('.startGameUI');
 
-const keys = [];
+let keys = [];
 
 let score = 0;
 ctx.font = '30px Impact';
@@ -126,6 +126,18 @@ function drawScore(){
     ctx.fillText(score, 95, 57)
 }
 
+//restart game
+
+const init = () => {
+    keys = [];
+    rats = [];
+    score = 0;
+    ratEatCheeseCount = 0;
+    currentTime = 5;
+    countDownTimerId = setInterval(countdown, 1000);
+
+}
+
 
 //countdown timer
 
@@ -149,12 +161,13 @@ function countdown() {
         // alert('GAME OVER. Your total score: ' + score);
         gameOverUI.style.display = 'initial';
         finalScore.innerHTML = score;
+
         restart.addEventListener('click', ()=>{
             gameOverUI.style.display = 'none';
-            setInterval(startAnimating(40), animateRats(0))
+            init();
+            startAnimating(40);
+            animateRats();
             })
-
-
         
     }
 }
