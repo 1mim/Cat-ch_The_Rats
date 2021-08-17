@@ -46,13 +46,19 @@ class Rat {
     }
 }
 
-
+// music and audio
 const ratNoise = document.createElement('audio');
-// ratNoise.src = 'qubodupSqueakyRatDeath.ogg';
+ratNoise.src = 'mouse-2.ogg';
+ratNoise.volume = 0.4;
 
 const catMeow = document.createElement('audio');
-// catMeow.src = 'Meow.ogg';
+catMeow.src = 'Meow.ogg';
+catMeow.volume = 0.5;
 
+let mySound = new Audio('8bit Bossa.mp3')
+mySound.play()
+
+//rat animation
 
 function animateRats(timestamp){
     // ctx.strokeRect(0, 0, canvas.width, canvas.height);
@@ -89,8 +95,6 @@ function getPoints() {
             if(!rats[i].counted){
             if(rats[i].sound == 'sound1'){
                 catMeow.play();
-            }else {
-                catMeow.play();
             }
             score += 2;
             rats[i].counted = true;
@@ -111,11 +115,9 @@ function losePoints() {
     for (let i = 0; i< rats.length; i++){
         if (ratEatCheese(cheeseTable, rats[i])){
             if(!rats[i].counted){
-            // if(rats[i].sound == 'sound1'){
-            //     catMeow.play();
-            // }else {
-            //     catMeow.play();
-            // }
+            if(rats[i].sound == 'sound1'){
+                ratNoise.play();
+            }
             score -= 2;
             ratEatCheeseCount++;
             rats[i].counted = true;

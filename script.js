@@ -159,6 +159,7 @@ function countdown() {
     if(currentTime == 0) {
         clearInterval(countDownTimerId);
         cancelAnimationFrame(animationIDRats)
+        
         // alert('GAME OVER. Your total score: ' + score);
         gameOverUI.style.display = 'initial';
         finalScore.innerHTML = score;
