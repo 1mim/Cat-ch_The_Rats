@@ -3,6 +3,11 @@ const ctx = canvas.getContext('2d');
 canvas.width = 650;
 canvas.height = 400;
 
+const restart = document.querySelector('#restart');
+const gameOverUI = document.querySelector('.gameOverUI');
+
+const finalScore = document.querySelector('.yourscore');
+
 
 const keys = [];
 
@@ -104,17 +109,6 @@ function handleCatFrame() {
 }
 
 
-// animate();
-
-let fps, fpsInterval, startTime, now, then, elapsed;
-
-function startAnimating(fps) {
-    fpsInterval = 1000/fps;
-    then = Date.now();
-    startTime = then;
-    animate();
-}
-
 // scoreboard 
 
 function drawScore(){
@@ -138,7 +132,7 @@ function drawTime(){
 
 }
 
-let currentTime = 15;
+let currentTime = 5;
 
 
 function countdown() {
@@ -147,7 +141,15 @@ function countdown() {
     if(currentTime == 0) {
         clearInterval(countDownTimerId);
         setTimeout(animateRats);
-        alert('GAME OVER. Your total score: ' + score);
+        // alert('GAME OVER. Your total score: ' + score);
+        gameOverUI.style.display = 'initial';
+        finalScore.innerHTML = score;
+        restart.addEventListener('click', ()=>{
+            gameOverUI.style.display = 'none';
+            startAnimating(40);
+            animateRats(0);
+
+        })
     }
 }
 
@@ -155,6 +157,15 @@ let countDownTimerId = setInterval(countdown, 1000);
 
 
 //animate
+
+let fps, fpsInterval, startTime, now, then, elapsed;
+
+function startAnimating(fps) {
+    fpsInterval = 1000/fps;
+    then = Date.now();
+    startTime = then;
+    animate();
+}
 
 function animate() {
     requestAnimationFrame(animate);
@@ -185,5 +196,5 @@ function animate() {
 
     }
 }
-
+gameOverUI.style.display = 'none'
 startAnimating(40);
