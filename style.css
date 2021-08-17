@@ -10,18 +10,7 @@
     transform: translate(-50%, -50%);
 }
 
-.fadeOut {
-    width: 650px;
-    height: 400px;
-    background: rgba(222, 184, 135, 0.514);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-
-.gameOverUI {
+.boxInMiddle {
     width: 300px;
     height: 150px;
     border-radius: 10px;
@@ -36,6 +25,20 @@
     transform: translate(-50%, -50%);
     font-family: Arial, Helvetica, sans-serif;
     line-height: none;
+    
+    
+    
+    
+}
+
+.gameOverUI {
+    width: 650px;
+    height: 400px;
+    background: rgba(222, 184, 135, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
 
