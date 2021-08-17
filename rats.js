@@ -67,7 +67,7 @@ function animateRats(timestamp){
     [...rats].forEach(object => object.draw());
     rats = rats.filter(object => !object.markedForDeletion);
 
-    requestAnimationFrame(animateRats);
+    animationIDRats = requestAnimationFrame(animateRats);
 
 }
 

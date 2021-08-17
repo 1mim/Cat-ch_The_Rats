@@ -58,7 +58,7 @@ const cheeseImage = new Image();
 cheeseImage.src = "cheese_table.png";
 
 const background = new Image();
-background.src = "r3_LivingRoom.png";
+background.src = "r4_LivingRoom.png";
 
 function drawCharacter(img, sX, sY, sW, sH, dX, dY, dW, dH){
     ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
@@ -135,6 +135,7 @@ const init = () => {
     ratEatCheeseCount = 0;
     currentTime = 5;
     countDownTimerId = setInterval(countdown, 1000);
+    clearInterval(countDownTimerId);
 
 }
 
@@ -143,13 +144,13 @@ const init = () => {
 
 function drawTime(){
     ctx.textAlign = 'center';
-    ctx.fillStyle = 'white';
-    ctx.font = '17px Arial';
-    ctx.fillText(currentTime, 595, 35);
+    ctx.fillStyle = 'tan';
+    ctx.font = '16px Arial';
+    ctx.fillText(currentTime, 564, 38);
 
 }
 
-let currentTime = 5;
+let currentTime = 15;
 
 
 function countdown() {
@@ -157,7 +158,7 @@ function countdown() {
 
     if(currentTime == 0) {
         clearInterval(countDownTimerId);
-        setTimeout(animateRats);
+        cancelAnimationFrame(animationIDRats)
         // alert('GAME OVER. Your total score: ' + score);
         gameOverUI.style.display = 'initial';
         finalScore.innerHTML = score;
@@ -166,7 +167,8 @@ function countdown() {
             gameOverUI.style.display = 'none';
             init();
             startAnimating(40);
-            animateRats();
+            animationIDRats = requestAnimationFrame(animateRats);
+            // animateRats(0)
             })
         
     }
@@ -176,6 +178,9 @@ let countDownTimerId = setInterval(countdown, 1000);
 
 
 //animate
+
+let animationID;
+let animationIDRats;
 
 let fps, fpsInterval, startTime, now, then, elapsed;
 
