@@ -39,7 +39,7 @@
 
 }
 
-button {
+#restart {
     width: 150px;
     height: 30px;
     border-radius: 20px;
@@ -52,3 +52,37 @@ button {
     font-weight: 500;
 
 }
+
+/* start of game UI */
+/* .startGameUI {
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 0px 10px grey;
+    position: absolute;
+    float: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: none;
+    
+}
+
+
+#play {
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0px solid ;
+    background: orange;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-weight: 500;
+
+} */

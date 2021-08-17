@@ -3,11 +3,16 @@ const ctx = canvas.getContext('2d');
 canvas.width = 650;
 canvas.height = 400;
 
+
+//display at gameover
 const restart = document.querySelector('#restart');
 const gameOverUI = document.querySelector('.gameOverUI');
-
 const finalScore = document.querySelector('.yourscore');
 
+
+//display at start of game
+const start = document.querySelector('#play');
+const startGameUI = document.querySelector('.startGameUI');
 
 const keys = [];
 
@@ -146,10 +151,11 @@ function countdown() {
         finalScore.innerHTML = score;
         restart.addEventListener('click', ()=>{
             gameOverUI.style.display = 'none';
-            startAnimating(40);
-            animateRats(0);
+            setInterval(startAnimating(40), animateRats(0))
+            })
 
-        })
+
+        
     }
 }
 
@@ -198,3 +204,10 @@ function animate() {
 }
 gameOverUI.style.display = 'none'
 startAnimating(40);
+
+// startButton.addEventListener('click', ()=>{
+//     startAnimating(40);
+//     animateRats(0);
+//     startGameUI.style.display = 'none';
+// })
+
