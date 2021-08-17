@@ -68,7 +68,6 @@ function animateRats(timestamp){
     rats = rats.filter(object => !object.markedForDeletion);
 
     requestAnimationFrame(animateRats);
-    if (isGameOver) setTimeout(animateRats)
 
 }
 

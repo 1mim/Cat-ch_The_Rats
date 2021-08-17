@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = 650;
 canvas.height = 400;
 
+
 const keys = [];
 
 let score = 0;
@@ -13,7 +14,6 @@ let ratEatCheeseCount = 0;
 
 let frame = 0;
 
-let isGameOver = false;
 
 
 // character animation
@@ -118,48 +118,40 @@ function startAnimating(fps) {
 // scoreboard 
 
 function drawScore(){
+    ctx.textAlign = 'center';
     ctx.fillStyle = 'orange';
     ctx.font = '10px Arial';
-    ctx.fillText("SCORE", 80, 22);
+    ctx.fillText("SCORE", 95, 22);
     ctx.fillStyle = 'white';
     ctx.font = '30px Impact';
-    ctx.fillText(score, 80, 57)
+    ctx.fillText(score, 95, 57)
 }
 
 
 //countdown timer
 
 function drawTime(){
+    ctx.textAlign = 'center';
     ctx.fillStyle = 'white';
     ctx.font = '17px Arial';
-    ctx.fillText(currentTime, 585, 35);
+    ctx.fillText(currentTime, 595, 35);
 
 }
 
 let currentTime = 15;
 
+
 function countdown() {
     currentTime--;
 
     if(currentTime == 0) {
-        isGameOver = true;
-        clearInterval(countDownTimerId)
-        alert('GAME OVER! your final score is ' + score)
+        clearInterval(countDownTimerId);
+        setTimeout(animateRats);
+        alert('GAME OVER. Your total score: ' + score);
     }
 }
 
 let countDownTimerId = setInterval(countdown, 1000);
-
-//gameOver
-
-function gameOver() {
-    clearInterval(gameTimerId);
-    isGameOver = true;
-    document.removeEventListener('keyup', control);
-
-}
-
-
 
 
 //animate
