@@ -68,6 +68,8 @@ function animateRats(timestamp){
     rats = rats.filter(object => !object.markedForDeletion);
 
     requestAnimationFrame(animateRats);
+    if (isGameOver) setTimeout(animateRats)
+
 }
 
 animateRats(0);
@@ -116,6 +118,7 @@ function losePoints() {
             //     catMeow.play();
             // }
             score -= 2;
+            ratEatCheeseCount++;
             rats[i].counted = true;
             rats.splice(i, 1);
         }}

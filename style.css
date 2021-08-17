@@ -15,6 +15,7 @@
     height: 400px;
     /* border-radius: 20px; */
     background: none;
+    opacity: 0.5;
     position: absolute;
     top: 50%;
     left: 50%;

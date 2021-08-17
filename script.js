@@ -9,8 +9,11 @@ let score = 0;
 ctx.font = '30px Impact';
 
 let catchCount = 0;
+let ratEatCheeseCount = 0;
+
 let frame = 0;
 
+let isGameOver = false;
 
 
 // character animation
@@ -124,8 +127,7 @@ function drawScore(){
 }
 
 
-//timer
-
+//countdown timer
 
 function drawTime(){
     ctx.fillStyle = 'white';
@@ -134,19 +136,31 @@ function drawTime(){
 
 }
 
-// let timeLeft = 0;
-let currentTime = 30;
+let currentTime = 15;
 
 function countdown() {
     currentTime--;
 
     if(currentTime == 0) {
+        isGameOver = true;
         clearInterval(countDownTimerId)
         alert('GAME OVER! your final score is ' + score)
     }
 }
 
 let countDownTimerId = setInterval(countdown, 1000);
+
+//gameOver
+
+function gameOver() {
+    clearInterval(gameTimerId);
+    isGameOver = true;
+    document.removeEventListener('keyup', control);
+
+}
+
+
+
 
 //animate
 
