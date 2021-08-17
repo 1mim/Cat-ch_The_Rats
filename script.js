@@ -58,7 +58,7 @@ const cheeseImage = new Image();
 cheeseImage.src = "r2_cheese_table.png";
 
 const background = new Image();
-background.src = "r5_LivingRoom.png";
+background.src = "r6_LivingRoom.png";
 
 function drawCharacter(img, sX, sY, sW, sH, dX, dY, dW, dH){
     ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
