@@ -49,16 +49,16 @@ class Rat {
 
 // music and audio
 const ratNoise = document.createElement('audio');
-// ratNoise.src = 'mouse-2.ogg';
-// ratNoise.volume = 0.4;
+ratNoise.src = 'mouse-2.ogg';
+ratNoise.volume = 0.4;
 
 const catMeow = document.createElement('audio');
-// catMeow.src = 'Meow.ogg';
-// catMeow.volume = 0.5;
+catMeow.src = 'Meow.ogg';
+catMeow.volume = 0.5;
 
-// let mySound = new Audio('8bit Bossa.mp3');
-// mySound.play();
-// mySound.loop = true;
+let mySound = new Audio('8bit Bossa.mp3');
+mySound.play();
+mySound.loop = true;
 
 //rat animation
 
@@ -135,8 +135,17 @@ function startGame (){
     gameOverUI.style.display = 'none';
     startAnimating(40);
     animateRats(0);
+    currentTime = 20;
+    mySound.play();
     
 }
 
-
 startButton.addEventListener('click', startGame);
+
+// startButton.addEventListener('click', ()=>{
+//     startGameUI.style.display = 'none';
+//     gameOverUI.style.display = 'none';
+//     startAnimating(40);
+//     animateRats(0);
+// });
+

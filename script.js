@@ -137,6 +137,8 @@ const init = () => {
     currentTime = 15;
     clearInterval(countDownTimerId);
     countDownTimerId = setInterval(countdown, 1000);
+    mySound.play();
+    mySound.volume = 1;
 }
 
 
@@ -158,7 +160,8 @@ function countdown() {
 
     if(currentTime == 0) {
         clearInterval(countDownTimerId);
-        cancelAnimationFrame(animationIDRats)
+        cancelAnimationFrame(animationIDRats);
+        mySound.volume = 0.2;
         // alert('GAME OVER. Your total score: ' + score);
         gameOverUI.style.display = 'initial';
         finalScore.innerHTML = score;
