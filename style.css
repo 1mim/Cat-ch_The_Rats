@@ -19,16 +19,21 @@
     background: white;
     box-shadow: 0px 0px 10px grey;
     position: absolute;
-    float: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Arial, Helvetica, sans-serif;
     line-height: none;
     
-    
-    
-    
+}
+
+.containGOinfo {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .gameOverUI {
@@ -43,15 +48,12 @@
 }
 
 
-
 .yourscore {
 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
-    padding: 17px;
-    bottom: 50%;
-    line-height: 10px;
-    margin: 10px;
+    padding: 10px;
+    line-height: none;
 
 }
 
@@ -61,10 +63,7 @@
     border-radius: 20px;
     border: 0px solid ;
     background: orange;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
