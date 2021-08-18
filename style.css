@@ -1,6 +1,7 @@
 html{
-    /* background-image: url('cat_seamless_2.jpg');  */
-    background-color: rgb(9, 3, 95);  
+    background-image: url('cat_seamless_2.jpg');
+    /* opacity: 0.5;  */
+    /* background-color: rgb(9, 3, 95);   */
 }
     #canvas1 {
     width: 650px;
