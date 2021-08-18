@@ -49,11 +49,11 @@ class Rat {
 
 // music and audio
 const ratNoise = document.createElement('audio');
-ratNoise.src = 'mouse-2.ogg';
+ratNoise.src = 'zapsplat_rodent_squeak.mp3';
 ratNoise.volume = 0.4;
 
 const catMeow = document.createElement('audio');
-catMeow.src = 'Meow.ogg';
+catMeow.src = 'Blastwave_CatMeow_.mp3';
 catMeow.volume = 0.5;
 
 let mySound = new Audio('8bit Bossa.mp3');
