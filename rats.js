@@ -130,24 +130,18 @@ function losePoints() {
 
 //start page to click and play
 
-function startGame (){
-    startGameUI.style.display = 'none';
-    gameOverUI.style.display = 'none';
-    startAnimating(40);
-    animateRats(0);
-    currentTime = 20;
-    clearInterval(countDownTimerId);
-    countDownTimerId = setInterval(countdown, 1000);
-    mySound.play();
-    
-}
-
-startButton.addEventListener('click', startGame);
-
-// startButton.addEventListener('click', ()=>{
+// function startGame (){
 //     startGameUI.style.display = 'none';
 //     gameOverUI.style.display = 'none';
 //     startAnimating(40);
 //     animateRats(0);
-// });
+//     animateGreen(0);
+//     currentTime = 20;
+//     clearInterval(countDownTimerId);
+//     countDownTimerId = setInterval(countdown, 1000);
+//     mySound.play();
+    
+// }
+
+// startButton.addEventListener('click', startGame);
 
