@@ -11,8 +11,9 @@ const finalScore = document.querySelector('.yourscore');
 
 
 //display at start of game
-const start = document.querySelector('#play');
-const startGameUI = document.querySelector('.startGameUI');
+const startButton = document.querySelector('#play');
+const startGameUI = document.querySelector('#startGameUI');
+startGameUI.style.display = 'initial';
 
 let keys = [];
 
@@ -217,8 +218,9 @@ function animate() {
 
     }
 }
-gameOverUI.style.display = 'none'
-startAnimating(40);
+// gameOverUI.style.display = 'none';
+// startAnimating(40);
+
 
 // startButton.addEventListener('click', ()=>{
 //     startAnimating(40);

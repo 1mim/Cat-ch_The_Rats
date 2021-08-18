@@ -79,7 +79,7 @@ function animateRats(timestamp){
 
 }
 
-animateRats(0);
+// animateRats(0);
 
 
 // +2 points for catching rats 
@@ -128,5 +128,15 @@ function losePoints() {
 }}
 
 
+//start page to click and play
+
+function startGame (){
+    startGameUI.style.display = 'none';
+    gameOverUI.style.display = 'none';
+    startAnimating(40);
+    animateRats(0);
+    
+}
 
 
+startButton.addEventListener('click', startGame);
