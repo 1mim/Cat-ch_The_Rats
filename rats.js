@@ -136,6 +136,8 @@ function startGame (){
     startAnimating(40);
     animateRats(0);
     currentTime = 20;
+    clearInterval(countDownTimerId);
+    countDownTimerId = setInterval(countdown, 1000);
     mySound.play();
     
 }
