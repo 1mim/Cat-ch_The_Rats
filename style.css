@@ -34,7 +34,7 @@
 .gameOverUI {
     width: 650px;
     height: 400px;
-    background: rgba(222, 184, 135, 0.4);
+    background: rgba(222, 184, 135, 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,6 +63,7 @@
     background: orange;
     position: absolute;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     font-weight: 500;
@@ -80,36 +81,92 @@
     box-shadow: 0px 0px 5px grey;
 
 }
+
 /* start of game UI */
-/* .startGameUI {
-    width: 300px;
-    height: 150px;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    background: white;
-    box-shadow: 0px 0px 10px grey;
+ #startGameUI {
+    width: 650px;
+    height: 400px;
+    border: 5px solid tan;
+    /* border-radius: 20px; */
+    background-image: url('base_Start_page.png');
     position: absolute;
-    float: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: none;
+ 
     
 }
 
+.containStartInfo{
+    margin: 0;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: none;
+}
 
 #play {
-    width: 150px;
-    height: 30px;
-    border-radius: 20px;
-    border: 0px solid ;
-    background: orange;
+    border-radius: 30px;
+    background-color: rgb(10, 2, 112);
+    border: 3px solid black;
+    color: rgb(238, 237, 237);
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 170px;
+    height: 45px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+    margin-top: 5px;
+
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+  #play span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #play span:after {
+    content: '\00bb';
     position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #play:hover span {
+    padding-right: 25px;
+  }
+  
+  #play:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+#play:hover {
+    background: linear-gradient(90deg, rgba(10,2,112,1) 0%, rgba(9,9,121,1) 35%, rgba(24,226,173,1) 100%);
+}
+
+.instructions {
+    width: 410px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid rgb(10, 2, 112, 0.9);
+    position: absolute;
+    padding: 10px;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    font-weight: 500;
+    font-size: 13px;
+    color: rgba(9, 2, 112, 0.9);
 
-} */
+} 
