@@ -15,6 +15,9 @@ const startButton = document.querySelector('#play');
 const startGameUI = document.querySelector('#startGameUI');
 startGameUI.style.display = 'initial';
 
+
+const mySound = document.querySelector('#mySound');
+
 let keys = [];
 
 let score = 0;
@@ -134,11 +137,7 @@ const init = () => {
     rats = [];
     score = 0;
     ratEatCheeseCount = 0;
-    currentTime = 60;
-    clearInterval(countDownTimerId);
-    countDownTimerId = setInterval(countdown, 1000);
-    mySound.play();
-    mySound.volume = 1;
+    mySound.volume = 0.4;
 }
 
 
@@ -163,7 +162,6 @@ function countdown() {
         cancelAnimationFrame(animationIDRats);
         cancelAnimationFrame(animationIDGreen);
         mySound.volume = 0.2;
-        // alert('GAME OVER. Your total score: ' + score);
         gameOverUI.style.display = 'initial';
         finalScore.innerHTML = score;
 
@@ -172,6 +170,10 @@ function countdown() {
             startAnimating(40);
             animateRats(0);
             animateGreen(0);
+            currentTime = 45;
+            clearInterval(countDownTimerId);
+            countDownTimerId = setInterval(countdown, 1000);
+            mySound.play();
             gameOverUI.style.display = 'none';
             })
     }

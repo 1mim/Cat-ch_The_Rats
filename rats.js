@@ -50,15 +50,12 @@ class Rat {
 // music and audio
 const ratNoise = document.createElement('audio');
 ratNoise.src = 'zapsplat_rodent_squeak.mp3';
-ratNoise.volume = 0.4;
+ratNoise.volume = 0.3;
 
 const catMeow = document.createElement('audio');
-catMeow.src = 'Blastwave_CatMeow_.mp3';
-catMeow.volume = 0.5;
+catMeow.src = 'CatMeow3.mp3';
+catMeow.volume = 0.3;
 
-let mySound = new Audio('8bit Bossa.mp3');
-mySound.play();
-mySound.loop = true;
 
 //rat animation
 
@@ -127,21 +124,4 @@ function losePoints() {
         }}
 }}
 
-
-//start page to click and play
-
-// function startGame (){
-//     startGameUI.style.display = 'none';
-//     gameOverUI.style.display = 'none';
-//     startAnimating(40);
-//     animateRats(0);
-//     animateGreen(0);
-//     currentTime = 20;
-//     clearInterval(countDownTimerId);
-//     countDownTimerId = setInterval(countdown, 1000);
-//     mySound.play();
-    
-// }
-
-// startButton.addEventListener('click', startGame);
 

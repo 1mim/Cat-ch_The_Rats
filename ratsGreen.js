@@ -41,7 +41,6 @@ class Green {
         }
     }
     draw(){
-        // ctx.strokeRect(this.x, 120+this.y, this.width, this.height);
         ctx.drawImage(this.image, 45, 50, this.greenSpriteWidth, this.greenSpriteHeight, this.x, 120+this.y, this.width, this.height);
     }
 }
@@ -49,7 +48,6 @@ class Green {
 //green animation
 
 function animateGreen(timestamp){
-    // ctx.strokeRect(0, 0, canvas.width, canvas.height);
     let deltatime = timestamp - lastTimeGreen;
     lastTimeGreen = timestamp;
     timeToNextGreen += deltatime;
@@ -115,20 +113,25 @@ function losePointsG() {
 
 //Start Game
 
-
-
 function startGame (){
     startGameUI.style.display = 'none';
     gameOverUI.style.display = 'none';
     startAnimating(40);
     animateRats(0);
     animateGreen(0);
-    currentTime = 60;
+    currentTime = 80;
     clearInterval(countDownTimerId);
     countDownTimerId = setInterval(countdown, 1000);
     mySound.play();
     
 }
+
+
+window.addEventListener('DOMContentLoaded', ()=>{
+    mySound.play();
+    mySound.volume = 0.4;
+})  
+
 
 startButton.addEventListener('click', startGame);
 
