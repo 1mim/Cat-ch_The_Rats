@@ -133,11 +133,13 @@ function drawScore(){
 //restart game
 
 const init = () => {
+    currentTime = 30;
+    clearInterval(countDownTimerId);
+    countDownTimerId = setInterval(countdown, 1000);
     keys = [];
     rats = [];
     score = 0;
     ratEatCheeseCount = 0;
-    mySound.volume = 0.6;
 }
 
 
@@ -170,10 +172,8 @@ function countdown() {
             startAnimating(40);
             animateRats(0);
             animateGreen(0);
-            currentTime = 45;
-            clearInterval(countDownTimerId);
-            countDownTimerId = setInterval(countdown, 1000);
             mySound.play();
+            mySound.volume = 0.6;
             gameOverUI.style.display = 'none';
             })
     }
