@@ -123,13 +123,14 @@ function startGame (){
     clearInterval(countDownTimerId);
     countDownTimerId = setInterval(countdown, 1000);
     mySound.play();
+    mySound.volume = 0.6;
     
 }
 
 
 window.addEventListener('DOMContentLoaded', ()=>{
     mySound.play();
-    mySound.volume = 0.4;
+    mySound.volume = 0.6;
 })  
 
 

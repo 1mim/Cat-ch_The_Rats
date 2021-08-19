@@ -137,7 +137,7 @@ const init = () => {
     rats = [];
     score = 0;
     ratEatCheeseCount = 0;
-    mySound.volume = 0.4;
+    mySound.volume = 0.6;
 }
 
 
