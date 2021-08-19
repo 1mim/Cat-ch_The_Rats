@@ -119,7 +119,7 @@ function startGame (){
     startAnimating(40);
     animateRats(0);
     animateGreen(0);
-    currentTime = 70;
+    currentTime = 60;
     clearInterval(countDownTimerId);
     countDownTimerId = setInterval(countdown, 1000);
     mySound.play();
@@ -136,3 +136,53 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 startButton.addEventListener('click', startGame);
 
+//restart game
+
+const init = () => {
+    currentTime = 30;
+    clearInterval(countDownTimerId);
+    countDownTimerId = setInterval(countdown, 1000);
+    keys = [];
+    rats = [];
+    score = 0;
+    ratEatCheeseCount = 0;
+}
+
+
+//countdown timer
+
+function drawTime(){
+    ctx.textAlign = 'center';
+    ctx.fillStyle = 'tan';
+    ctx.font = '16px Arial';
+    ctx.fillText(currentTime, 564, 38);
+
+}
+
+let currentTime = 15;
+
+
+function countdown() {
+    currentTime--;
+
+    if(currentTime == 0) {
+        clearInterval(countDownTimerId);
+        cancelAnimationFrame(animationIDRats);
+        cancelAnimationFrame(animationIDGreen);
+        mySound.volume = 0.2;
+        gameOverUI.style.display = 'initial';
+        finalScore.innerHTML = score;
+
+        restart.addEventListener('click', ()=>{
+            init();
+            startAnimating(40);
+            animateRats(0);
+            animateGreen(0);
+            mySound.play();
+            mySound.volume = 0.6;
+            gameOverUI.style.display = 'none';
+            })
+    }
+}
+
+let countDownTimerId = setInterval(countdown, 1000);
