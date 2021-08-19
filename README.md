@@ -14,7 +14,7 @@ Lose points:
 -5 points for green rats. 
 
 
-<strong>PLAY NOW:</strong> <a href="https://1mim.github.io/Cat-ch_The_Rats/">Cat-ch The Rats</a>
+<strong>PLAY NOW:</strong> <a href="https://1mim.github.io/Catch_The_Rats/">Cat-ch The Rats</a>
 
 Enjoy!
 
