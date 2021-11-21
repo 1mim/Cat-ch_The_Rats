@@ -8,37 +8,24 @@ Using your arrow keys, help the cat catch as many rats before time runs out.
 
 # Scoreboard
 <table>
-  <thead>
-    <tr>
-      <th><strong>Win Points</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>+2 points</td>
-      <td>When you catch the regular rats.</td>
-    </tr>
-    <tr>
-      <td>+5 points</td>
-      <td>When you catch the green rats. </td>
-    </tr>
-  </tbody>
-  
-  <thead>
-    <tr>
-      <th><strong>Lose Points</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>-2 points</td>
-      <td>For regular rats.</td>
-    </tr>
-    <tr>
-      <td>+5 points</td>
-      <td>For green rats.</td>
-    </tr>
-  </tbody>
+<tbody>
+<tr>
+<td colspan="2"><strong>Win Points</strong></td>
+<td colspan="2"><strong>Lose Points</strong></td>
+</tr>
+<tr>
+<td>+2 points</td>
+<td>When you catch the regular rats.</td>
+<td>-2 points</td>
+<td>When regular rats get to cheese.</td>
+</tr>
+<tr>
+<td>+5 points</td>
+<td>When you catch the green rats.</td>
+<td>+5 points</td>
+<td>When green rats get to cheese.</td>
+</tr>
+</tbody>
 </table>
 
 
