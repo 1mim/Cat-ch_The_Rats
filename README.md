@@ -6,7 +6,7 @@ Help the cat catch as many rats before they get to the cheese.<br/>
 # Instructions
 Using your arrow keys, help the cat catch as many rats before time runs out. 
 
-#Scoreboard
+# Scoreboard
 <strong>Win +2 points</strong>
 When you catch the regular rats.
 
