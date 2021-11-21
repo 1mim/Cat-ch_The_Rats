@@ -18,7 +18,7 @@ When you catch the green rats.
 -5 points for green rats. 
 
 
-#Game logic
+# Game logic
 <img src="https://i.ibb.co/V3HPhLz/Game-preview-1.png" alt="" /><br>
 • Rats to come in randomly into the screen to get to the cheeese. <br>
 • Upon collison with the cheese, player will lose points, rats to disappear and 'squeak' sound to play.<br>
@@ -28,7 +28,7 @@ When you catch the green rats.
 • Countdown timer set to end game and reveal final score when time is up. Play again button allow players to restart the game. 
 
 
-#Challenges
+# Challenges
 1. making the rats come in randomly
 2. making the rats move at different speeds.
 3. linking the countdown to the game.
