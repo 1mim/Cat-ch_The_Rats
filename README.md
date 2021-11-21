@@ -7,13 +7,13 @@ Help the cat catch as many rats before they get to the cheese.<br/>
 Using your arrow keys, help the cat catch as many rats before time runs out. 
 
 # Scoreboard
-<strong>Win +2 points</strong>
+<strong>Win +2 points</strong><br/>
 When you catch the regular rats.
 
-<strong>Win +5 points</strong>
+<strong>Win +5 points</strong><br/>
 When you catch the green rats. 
 
-<strong>Lose points</strong>
+<strong>Lose points</strong><br/>
 -2 points for regular rats.
 -5 points for green rats. 
 
